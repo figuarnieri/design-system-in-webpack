@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "minify",
+    [
+      "@babel/preset-react",
+      {
+        "development": false
+      }
+    ]
+  ],
+  "plugins": []
+}

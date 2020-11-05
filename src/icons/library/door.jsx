@@ -1,0 +1,8 @@
+import React from 'react'
+import StyleSvg from '../style'
+
+export default props => (
+  <StyleSvg {...props} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 18H4V12H20V14H17C16.448 14 16 14.448 16 15C16 15.552 16.448 16 17 16H20V18ZM8.404 7.685C9.672 6.599 11.29 6 12.959 6H19C19.551 6 20 6.449 20 7V10H5.703L8.404 7.685ZM19 4H12.959C10.812 4 8.732 4.77 7.102 6.167L3.047 9.642C2.382 10.212 2 11.042 2 11.92V19C2 19.552 2.448 20 3 20H21C21.552 20 22 19.552 22 19V7C22 5.346 20.654 4 19 4Z" />
+  </StyleSvg>
+)
