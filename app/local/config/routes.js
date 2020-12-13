@@ -5,6 +5,7 @@ import PageError from '#/pages/error'
 import StartedRequirements from '#/pages/started/requirements'
 import StartedSetup from '#/pages/started/setup'
 import StartedUsage from '#/pages/started/usage'
+import UtilsRequest from '#/pages/utils/request'
 
 export default () => (
   <Switch>
@@ -12,6 +13,7 @@ export default () => (
     <Route exact path="/started/requirements" component={StartedRequirements} />
     <Route exact path="/started/setup" component={StartedSetup} />
     <Route exact path="/started/usage" component={StartedUsage} />
+    <Route exact path="/utils/request" component={UtilsRequest} />
     <Route path="*" component={PageError} />
   </Switch>
 )

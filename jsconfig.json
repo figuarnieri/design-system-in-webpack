@@ -1,0 +1,14 @@
+{
+  "exclude": ["node_modules", "dist", "assets"],
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es2020",
+    "module": "commonjs",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "#/*": ["./../app/local/*"],
+      "eleanor-webpack/*": ["./*"]
+    }
+  }
+}
