@@ -1,6 +1,8 @@
-const fs = require('fs')
+const fs = require('fs');
+const webpackResolve = require('../webpack/config/resolve');
 
 const gitignore = [
+  '# Automatically generated file. "app/scripts/prepare.js"',
   '*.class',
   '*.iml',
   '*.jar',
@@ -36,7 +38,7 @@ const gitignore = [
   'TEST*.xml',
   'Thumbs.db',
   'yarn.lock',
-]
+];
 
 const prepare = [
   '.babelrc.json',
@@ -51,17 +53,34 @@ const prepare = [
   '/assets',
   'app',
   'CHANGELOG.md',
+  'jsconfig.json',
   'LICENSE',
   'package.json',
   'README.md',
   'src',
-]
+];
 
-const components = fs.readdirSync('src').filter(item => !/(\.(t|j)sx?$)/.test(item))
+const jsConfig = {
+  '# Automatically generated file': 'app/scripts/prepare.js',
+  exclude: ['node_modules', 'dist', 'assets'],
+  compilerOptions: {
+    jsx: 'react',
+    target: 'es2020',
+    module: 'commonjs',
+  },
+};
+jsConfig.compilerOptions.paths = {};
 
-module.exports.prepare = [...prepare, 'node_modules']
+Object.entries(webpackResolve.alias).forEach((item) => {
+  const [key, value] = item;
+  jsConfig.compilerOptions.paths[`${key}/*`] = [`${value}\\*`];
+});
 
-module.exports.components = components
+const components = fs.readdirSync('src').filter(item => !/(\.(t|j)sx?$)/.test(item));
 
-fs.writeFileSync('.npmignore', [...gitignore].join('\n'))
-fs.writeFileSync('.gitignore', [...gitignore, ...components.map(item => `/${item}`)].join('\n'))
+module.exports.prepare = [...prepare, 'node_modules'];
+module.exports.components = components;
+
+fs.writeFileSync('.npmignore', [...gitignore].join('\n'));
+fs.writeFileSync('.gitignore', [...gitignore, ...components.map(item => `/${item}`)].join('\n'));
+fs.writeFileSync('jsconfig.json', JSON.stringify(jsConfig, null, 2));

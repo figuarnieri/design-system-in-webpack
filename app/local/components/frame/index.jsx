@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Menu, { MenuDivision, MenuItem } from '~/menu'
-import Header from '~/header'
-import Brands from '~/brands'
-import Wrapper, { WrapperBody, WrapperAside, WrapperInside, WrapperContent } from '~/wrapper'
+import Menu, { MenuDivision, MenuItem } from '@/menu'
+import Header from '@/header'
+import Brands from '@/brands'
+import Wrapper, { WrapperBody, WrapperAside, WrapperInside, WrapperContent } from '@/wrapper'
 
 export default ({ children }) => (
   <Wrapper>

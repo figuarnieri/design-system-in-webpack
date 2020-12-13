@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import color from '~/utils/token/color'
+import color from '@/utils/token/color'
 
 export const StyleCover = styled.div`
   position: relative;

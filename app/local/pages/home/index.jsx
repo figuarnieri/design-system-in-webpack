@@ -1,7 +1,7 @@
 import React from 'react'
 import Cover from '#/components/cover'
-import color from '~/utils/token/color'
-import Icon from '~/icons'
+import color from '@/utils/token/color'
+import Icon from '@/icons'
 
 export default () => (
   <>

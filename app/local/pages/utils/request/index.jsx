@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import Ajax from '~/utils/request';
+import Request from '@/utils/request';
 
 export default () => {
   useEffect(() => {
-    Ajax({
+    Request({
       url: '/',
     }).then((e) => console.log(11, e)).catch((e) => console.log(22, e));
   }, []);

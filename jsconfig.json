@@ -1,14 +1,27 @@
 {
-  "exclude": ["node_modules", "dist", "assets"],
+  "# Automatically generated file": "app/scripts/prepare.js",
+  "exclude": [
+    "node_modules",
+    "dist",
+    "assets"
+  ],
   "compilerOptions": {
     "jsx": "react",
     "target": "es2020",
     "module": "commonjs",
-    "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "#/*": ["./../app/local/*"],
-      "eleanor-webpack/*": ["./*"]
+      "@/*": [
+        "C:\\desodobrasil\\design-system-in-webpack\\src\\*"
+      ],
+      "#/*": [
+        "C:\\desodobrasil\\design-system-in-webpack\\app\\local\\*"
+      ],
+      "~/*": [
+        "C:\\desodobrasil\\design-system-in-webpack\\*"
+      ],
+      "eleanor-webpack/*": [
+        "C:\\desodobrasil\\design-system-in-webpack\\*"
+      ]
     }
   }
 }

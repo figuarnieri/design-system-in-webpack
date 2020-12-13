@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import Reset from '~/reset'
+import Reset from '@/reset'
 import Routes from '#/config/routes'
 import Frame from '#/components/frame'
 
