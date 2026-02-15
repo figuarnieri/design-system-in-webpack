@@ -20,12 +20,12 @@
   "author": "Webmotors S.A.",
   "license": "Apache-2.0",
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^1.13.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1",
-    "webpack": "^4.43.0"
+    "webpack": "^5.98.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
